@@ -55,24 +55,6 @@ b0=det(A1)/det(A)
 b1=det(A2)/det(A)
 b2=det(A3)/det(A)
 
-#Koefisien Determinasi
-#Y2
-Y2=numeric(n)
-for(i in 1:n){
-  Y2[i]=data$Y[i]^2}
-Y2=sum(Y2)
-
-#Yhat
-Yhat=numeric(n)
-for(i in 1:n){
-  Yhat[i]=-0.1865025+(0.8454172*data$X1[i])+(0.03237574*data$X2[i])}
-
-#Yhat2
-Yhat2=numeric(n)
-for(i in 1:n){
-  Yhat2[i]=Yhat[i]^2}
-Yhat2=sum(Yhat2)
-
 #with package
 regresi=lm(Y~X1+X2, data=data)
 summary(regresi)
